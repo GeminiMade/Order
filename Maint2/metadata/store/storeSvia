@@ -1,0 +1,119 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeSvia",
+        "storeId": "storeSvia"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "storeH1",
+    "designerId": "3dfd8a55-27be-4b1b-a462-e72e96d0c350",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://erpdc:10080/Gemini/Order/GetShipvia.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyJsonPProxy1",
+            "designerId": "7e829ea6-ae0d-4bc7-9dd5-549aaf5b8ec6",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "root"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "d2cace9a-8fd6-4738-a1f3-e45b0c5ee563"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField44",
+            "designerId": "1b2f456a-e559-45de-a1bc-e430484b6bfc"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField45",
+            "designerId": "9a906caf-1a54-4fcf-8955-7dd3873994c4"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onJsonpstoreBeforeLoad",
+                "implHandler": [
+                    "",
+                    "        db = Ext.getCmp('db').getValue();",
+                    "        ord = Ext.getCmp('inOrd').getValue();",
+                    "",
+                    "      store.getProxy().extraParams = {",
+                    "                DB: db,",
+                    "                PGID: 'MW',",
+                    "          ORD: ord",
+                    "};"
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onJsonpstoreBeforeLoad",
+            "designerId": "72137ed6-6d00-474a-875b-b9d89d539aad"
+        }
+    ]
+}

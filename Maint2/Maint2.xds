@@ -1,0 +1,69 @@
+{
+    "name": "Maint2",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "7.0.0.40",
+            "frameworkVersion": "6.7.0.212"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://localhost:52705/",
+        "exportPath": "",
+        "lockUrlPrefix": true,
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed",
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "sdkPath": ""
+    },
+    "xdsVersion": "4.2.6",
+    "xdsBuild": 423,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext67",
+    "viewOrderMap": {
+        "view": [
+            "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62",
+            "e06398df-21db-494a-8ccf-784239a17dcd",
+            "e0b7feb2-75c1-4538-ad8b-f4ba408c7b59"
+        ],
+        "store": [
+            "75ef6651-6d20-4af9-b2dc-85c7ebf3d8c1",
+            "83ca9cc3-cd59-4819-93c3-9b27068402cf",
+            "9f22a738-2a8d-45e6-8ea0-95257144439d",
+            "e6a568aa-d493-4cb8-9547-a5f3c6532b03",
+            "b803baa5-be62-4127-ae6f-63f837062b93",
+            "3dfd8a55-27be-4b1b-a462-e72e96d0c350",
+            "37ace400-86fb-487b-8378-76f5ca91a4b8"
+        ],
+        "controller": [
+            "02e19093-9c6b-4222-8b96-2632f82d7303"
+        ],
+        "model": [
+            "8d1bf484-ffbf-44c3-aa67-8224b5e7cd1c",
+            "74c85df8-39fd-442a-8ebe-c58fc4ce5cb2",
+            "bdd73b3d-08d6-42b7-a64b-775bb51904dd",
+            "201c7c95-a3a5-4174-a4c2-1d38fe0c02f0"
+        ],
+        "resource": [
+            "5cd540c2-d642-43d1-ae7b-73b266a81b62",
+            "efa3151d-f411-416b-a78d-276e3b22783a",
+            "62f545b2-1309-4768-9d9a-c012fc5d87ff",
+            "9d0e208b-9036-45de-a88a-23a3f03922d7"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

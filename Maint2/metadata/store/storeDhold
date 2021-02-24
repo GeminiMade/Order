@@ -1,0 +1,124 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "autoSync": true,
+        "designer|userClassName": "storeDhold",
+        "storeId": "storeDhold"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean",
+        "autoSync": "boolean"
+    },
+    "name": "storeSvia1",
+    "designerId": "37ace400-86fb-487b-8378-76f5ca91a4b8",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://erpdc:10080/Gemini/Order/GetSYUDFV.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyJsonPProxy1",
+            "designerId": "732fc6d0-dabd-4197-b143-e7c7f6d83be9",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "root"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "facf81db-73ff-4cbf-ad78-109d5e482f69"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField44",
+            "designerId": "7887c58c-ca27-4a14-8333-f035d28a8288"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField45",
+            "designerId": "eda0b1eb-ac41-4fbe-bfec-428fc9ed1d95"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onJsonpstoreBeforeLoad",
+                "implHandler": [
+                    "",
+                    "        db = Ext.getCmp('db').getValue();",
+                    "         ",
+                    "",
+                    "      store.getProxy().extraParams = {",
+                    "                DB: db,",
+                    "                PGID: 'MW',",
+                    "          TABLE: 'OEOUDT',",
+                    "          FIELD: 'DHOLD'",
+                    "};"
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onJsonpstoreBeforeLoad",
+            "designerId": "c60b6f75-6c92-422d-8fdc-71b530cbf37d"
+        }
+    ]
+}

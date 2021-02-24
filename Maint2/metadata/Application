@@ -1,0 +1,41 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Navigation"
+        ],
+        "models": [
+            "modelSec",
+            "modelMWV",
+            "modelMWVD",
+            "modelFRC"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "storeEnv",
+            "storeSec",
+            "storeMWVD",
+            "storeH",
+            "storeSvia",
+            "storeDhold",
+            "storeFRC"
+        ],
+        "views": [
+            "MainView"
+        ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "models": "typedarray",
+        "name": "string",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

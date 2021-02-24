@@ -1,0 +1,148 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "storeH",
+        "model": "modelMWV",
+        "storeId": "storeH"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonPStore",
+    "designerId": "b803baa5-be62-4127-ae6f-63f837062b93",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://erpdc:10080/Gemini/Order/GetVMW.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyJsonPProxy1",
+            "designerId": "8e2ddfcb-6f86-483b-9a7b-818d358465f7",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "root"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "b4ee6745-4e69-4b9f-b709-2a1a5a107284"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onJsonpstoreLoad",
+                "implHandler": [
+                    " if (records.length > 0){",
+                    "            data = records[0].data;",
+                    "            Ext.getCmp('hold').setValue(data.HOLD);",
+                    "            Ext.getCmp('oebdte').setValue(data.OEBDTE);",
+                    "            Ext.getCmp('oeslsm').setValue(data.OESLSM);",
+                    "            Ext.getCmp('oecont').setValue(data.OECONT);",
+                    "            Ext.getCmp('oeudf2').setValue(data.OEUDF2);",
+                    "            Ext.getCmp('oeorrf').setValue(data.OEORRF);",
+                    "            Ext.getCmp('oesvsv').setValue(data.OESVSV);",
+                    "      Ext.getCmp('oectrm').setValue(data.OECTRM);",
+                    "            Ext.getCmp('crfgl').setValue(data.CRFGL);",
+                    "            Ext.getCmp('cust').setValue(data.CUST);",
+                    "     Ext.getCmp('cust1').setValue(data.OESHTO);",
+                    "            Ext.getCmp('cmcna1').setValue(data.CMCNA1);",
+                    "            Ext.getCmp('adr').setValue(data.ADR);",
+                    "            Ext.getCmp('oerqdt').setValue(data.OERQDT);",
+                    "            Ext.getCmp('oedte2').setValue(data.OEDTE2);",
+                    "            Ext.getCmp('oesvds').setValue(data.OESVDS);",
+                    "            Ext.getCmp('bd').setValue(data.BD);",
+                    "     Ext.getCmp('ds').setValue(data.DSHP);",
+                    "     Ext.getCmp('dsadr').setHtml(data.DSHPADR);",
+                    "            Ext.getCmp('pd').setValue(data.PD);",
+                    "            Ext.getCmp('panelO1').setTitle('Order Review / Maintenance for ' +data.TITLE);",
+                    "                 Ext.getCmp('panelO2').setTitle('Order Review / Maintenance for ' +data.TITLE);",
+                    "",
+                    "",
+                    "   db = Ext.getCmp('db').getValue();",
+                    "        ord = Ext.getCmp('inOrd').getValue();",
+                    "",
+                    "     htm = 'http://erpdc:85/PHP/Gemini/OE/getAddDaysforOrd2.php?DB='+ db + '&ORD='+ ord;",
+                    "     Ext.getCmp('panelO2').setHtml('<iframe src=\"' + htm + '\" width=\"90%\"  height = \"90%\"></iframe>');",
+                    "",
+                    "",
+                    "",
+                    "if (data.DVAL === '1') {",
+                    "    Ext.getCmp('dsval').setHidden(true);",
+                    "    Ext.getCmp('dsvalm').setHtml('Drop Ship Address is Valid');",
+                    "    Ext.getCmp('dsvalm').setStyle('color: green;');",
+                    "}",
+                    "if (data.DVAL === '2') {",
+                    "    Ext.getCmp('dsval').setText('Validate Drop Ship Address');",
+                    "    Ext.getCmp('dsvalm').setHtml(data.DVALM);",
+                    "    Ext.getCmp('dsvalm').setStyle('color: red;');",
+                    "}",
+                    "if (data.DVAL === 'X') {",
+                    "    Ext.getCmp('dsval').setHidden(true);",
+                    "    Ext.getCmp('dsvalm').setHtml('Drop Ship Address Overridden');",
+                    "    Ext.getCmp('dsvalm').setStyle('color: #ff7400;');",
+                    "}",
+                    "if (data.DVAL === 'NC') {",
+                    "    Ext.getCmp('dsval').setText('Validate Drop Ship Address');",
+                    "    Ext.getCmp('dsvalm').setHtml('Address Not Verified');",
+                    "    Ext.getCmp('dsvalm').setStyle('color: #3914af;');",
+                    "}",
+                    "",
+                    "if (data.DVAL === 'NA') {",
+                    "    Ext.getCmp('dsval').setHidden(true);",
+                    "    Ext.getCmp('dsvalm').setHidden(true);",
+                    "    Ext.getCmp('ds').setHidden(true);",
+                    "    Ext.getCmp('dsadr').setHidden(true);",
+                    "}",
+                    "        }",
+                    "",
+                    "Ext.getCmp('cvalmsg').setHtml(data.CVALMSG);",
+                    "if (data.CVAL !== 'NA'){",
+                    "    Ext.getCmp('cval').setHidden(true);",
+                    "    Ext.getCmp('cvalmsg').setHtml('Address has been checked');",
+                    "}",
+                    ""
+                ],
+                "name": "load",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onJsonpstoreLoad",
+            "designerId": "332efe41-a407-465a-a8f0-c6370f2c09bb"
+        }
+    ]
+}

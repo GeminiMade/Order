@@ -1,0 +1,69 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "{",
+            "\"id\": \"GI\",",
+            "\"text\": \"Production (GI)\"",
+            "},",
+            "{",
+            "\"id\": \"GT\",",
+            "\"text\": \"Testing/Training (GT)\"",
+            "},",
+            "{",
+            "\"id\": \"TS\",",
+            "\"text\": \"Gemini Development (TS)\"",
+            "}",
+            "]"
+        ],
+        "designer|userClassName": "storeEnv",
+        "storeId": "storeEnv"
+    },
+    "configAlternates": {
+        "data": "array",
+        "designer|userClassName": "string",
+        "storeId": "string"
+    },
+    "name": "MyStore",
+    "designerId": "75ef6651-6d20-4af9-b2dc-85c7ebf3d8c1",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField",
+            "designerId": "d658dda2-5d58-4092-b808-1b97a3bfc016"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField1",
+            "designerId": "97948208-e3ec-424e-b76b-d477de3418db"
+        }
+    ]
+}

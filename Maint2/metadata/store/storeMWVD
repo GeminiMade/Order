@@ -1,0 +1,154 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoSync": true,
+        "data": [
+            "[",
+            "    {",
+            "        \"ODORD\": \"autem\",",
+            "        \"BD\": \"6/13/2003\",",
+            "        \"PD\": \"10/6/2008\",",
+            "        \"MS\": \"dolorum\",",
+            "        \"LS\": \"fugit\",",
+            "        \"ODWH\": 922,",
+            "        \"XXX\": \"alias\",",
+            "        \"DATSHP\": \"2/20/2008\",",
+            "        \"DHOLD\": \"distinctio\",",
+            "        \"ODORST\": \"voluptas\",",
+            "        \"ODSHPS\": \"dicta\",",
+            "        \"ODSVSV\": \"ut\",",
+            "        \"TURN\": 883,",
+            "        \"PKL\": 202,",
+            "        \"STAT\": \"voluptatibus\",",
+            "        \"ODSVDS\": \"nihil\",",
+            "        \"ODRQDT\": \"provident\"",
+            "    },",
+            "    {",
+            "        \"ODORD\": \"asperiores\",",
+            "        \"BD\": \"11/5/2001\",",
+            "        \"PD\": \"1/3/2002\",",
+            "        \"MS\": \"ut\",",
+            "        \"LS\": \"qui\",",
+            "        \"ODWH\": 752,",
+            "        \"XXX\": \"aspernatur\",",
+            "        \"DATSHP\": \"8/7/2010\",",
+            "        \"DHOLD\": \"temporibus\",",
+            "        \"ODORST\": \"et\",",
+            "        \"ODSHPS\": \"magni\",",
+            "        \"ODSVSV\": \"amet\",",
+            "        \"TURN\": 425,",
+            "        \"PKL\": 227,",
+            "        \"STAT\": \"earum\",",
+            "        \"ODSVDS\": \"voluptatem\",",
+            "        \"ODRQDT\": \"libero\"",
+            "    },",
+            "    {",
+            "        \"ODORD\": \"dolorem\",",
+            "        \"BD\": \"4/17/2001\",",
+            "        \"PD\": \"12/25/2007\",",
+            "        \"MS\": \"ducimus\",",
+            "        \"LS\": \"ut\",",
+            "        \"ODWH\": 357,",
+            "        \"XXX\": \"dicta\",",
+            "        \"DATSHP\": \"6/15/2010\",",
+            "        \"DHOLD\": \"exercitationem\",",
+            "        \"ODORST\": \"ex\",",
+            "        \"ODSHPS\": \"assumenda\",",
+            "        \"ODSVSV\": \"error\",",
+            "        \"TURN\": 60,",
+            "        \"PKL\": 783,",
+            "        \"STAT\": \"incidunt\",",
+            "        \"ODSVDS\": \"consequatur\",",
+            "        \"ODRQDT\": \"necessitatibus\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "storeMWVD",
+        "model": "modelMWVD",
+        "storeId": "storeMWVD"
+    },
+    "configAlternates": {
+        "autoSync": "boolean",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "data": "array"
+    },
+    "name": "storeMWV1",
+    "designerId": "9f22a738-2a8d-45e6-8ea0-95257144439d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://erpdc:10080/Gemini/Order/GetVMWD.php"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyJsonPProxy",
+            "designerId": "a0bd7912-1b96-4efb-a174-520f12a42732",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "root"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "783fc9dc-fa8b-49b3-be20-7c41bf753886"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onJsonpstoreBeforeLoad",
+                "implHandler": [
+                    " ",
+                    "        db = Ext.getCmp('db').getValue();",
+                    "        ord = Ext.getCmp('inOrd').getValue();",
+                    "",
+                    "      store.getProxy().extraParams = {",
+                    "                DB: db,",
+                    "                PGID: 'MW',",
+                    "          ORD: ord",
+                    "};",
+                    "",
+                    "        "
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onJsonpstoreBeforeLoad",
+            "designerId": "13467465-2e77-44bd-81a6-e4e1bcd4a957"
+        }
+    ]
+}

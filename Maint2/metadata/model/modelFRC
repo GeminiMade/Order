@@ -1,0 +1,114 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelFRC"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "201c7c95-a3a5-4174-a4c2-1d38fe0c02f0",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EFCUST"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField48",
+            "designerId": "f391e49a-7bba-4d40-8cee-c65395abf004"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EFCONT"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField63",
+            "designerId": "a3ba294e-191e-4fd2-840f-582dd9d43f52"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EFSEQ"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField68",
+            "designerId": "060561e0-e5a3-44ed-b15a-b3f58d736a8e"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EFDOCT"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField69",
+            "designerId": "656bf21e-1441-49c5-b9a7-c882af7836c8"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EFEMAL"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField71",
+            "designerId": "71b0762b-3b09-49da-b067-a6b0458ae1d4"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EFRNAM"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField72",
+            "designerId": "1425c05d-6429-434c-b48a-41edb7ac51e2"
+        }
+    ]
+}
