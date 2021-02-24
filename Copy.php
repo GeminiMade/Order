@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('details_errors', TRUE);
 ini_set('details_startup_errors', TRUE);
 ini_set('memory_limit', '-1');
-include "../GConC.php";
+include "../GConB.php";
 
 if(isset($_POST['submit']))
 { $ord = $_POST['ORD'];} else $ord = 0;
